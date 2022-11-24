@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="Principal">
+
+        <div id="P1">
+
+            <div id="interfaz">
+
+            </div>
+
+        </div>
+        <div  id="P2">
+            <div>
+                <button type="button">Tamaño del panel</button>
+                <button type="button">Click Me!</button>
+                <button type="button">Click Me!</button>
+                <button type="button">Click Me!</button>
+                <button type="button">Click Me!</button>
+                <button type="button" id="ExtraerDatos">Extraer Datos</button>
+            </div>
+            <div id="ConfPanel">
+                <h1 class="titulo">Id</h1>
+                <input  class="Entry" id="ConfPanelId" autocomplete="off"  type="text">
+                <br>
+                <h1 class="titulo">Nombre</h1>
+                <input  class="Entry" id="ConfPanelNombre" autocomplete="off" type="text">
+                <br>
+                <h1 class="titulo">Ancho</h1>
+                <input  class="Entry" id="ConfPanelAncho" autocomplete="off" maxlength="4" type="text">
+                <br>
+                <h1 class="titulo">Largo</h1>
+                <input  class="Entry" id="ConfPanelLargo" autocomplete="off" maxlength="4" type="text">
+                <br>
+                <button type="button" id="ConfPanelEditarTamaño">Editar Tamaño</button>
+                <br>
+                <input  class="Entry" id="ConfPanelColor" type="color" >
+                <button type="button" id="ConfPanelEditarColor">Editar Colores</button>
+                <br>
+                <h1 class="titulo">Permitir cambio de tamaño</h1>
+                <select class="Combobox" id="ConfPanelCombo"> 
+                    <option value="Si" selected>Si</option>
+                    <option value="No">No</option>
+                </select>
+                <button type="button" id="ConfPanelEditarGuardar">Guardar Cambios</button>
+
+
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
+
+<script type="module">
+
+    //.client conocer el ancho y largo de un componente
+    var AnchoMaximo = document.getElementById("interfaz").clientWidth;
+    var LargoMaximo = document.getElementById("interfaz").clientHeight;
+    var Variables = [];
+    var Contenido =[];
+
+
+    document.getElementById("ConfPanelEditarTamaño").onclick = function(e){
+        var largo = document.getElementById("ConfPanelLargo").value;
+        var ancho = document.getElementById("ConfPanelAncho").value;
+        largo = largo.replace("Full Screen",LargoMaximo);
+        ancho = ancho.replace("Full Screen",AnchoMaximo);
+    
+        if(ancho < AnchoMaximo && largo < LargoMaximo){
+            document.getElementById("interfaz").style.height = largo+"px";
+            document.getElementById("interfaz").style.width = ancho+"px";
+        }
+        else{
+            if(ancho >= AnchoMaximo){
+                document.getElementById("interfaz").style.width = AnchoMaximo+"px";
+                document.getElementById("ConfPanelAncho").value = "Full Screen";
+            }
+
+            if(largo >= LargoMaximo){
+                document.getElementById("interfaz").style.height = LargoMaximo+"px";
+                document.getElementById("ConfPanelLargo").value = "Full Screen";
+            }
+            if(ancho < AnchoMaximo){
+                document.getElementById("interfaz").style.width = ancho+"px";
+            }
+
+            if(largo < LargoMaximo){
+                document.getElementById("interfaz").style.height = largo+"px";
+            }
+        }
+    }
+    document.getElementById("ConfPanelEditarColor").onclick = function(e){
+        var color = document.getElementById("ConfPanelColor").value;
+        document.getElementById("interfaz").style.backgroundColor = color;        
+    }
+    document.getElementById("ConfPanelEditarGuardar").onclick = function(e){
+
+        var largo = document.getElementById("ConfPanelLargo").value;
+        var ancho = document.getElementById("ConfPanelAncho").value;
+        var color = document.getElementById("ConfPanelColor").value;
+        var id = document.getElementById("ConfPanelId").value;
+        var nombre = document.getElementById("ConfPanelNombre").value;
+        var CTamaño = document.getElementById("ConfPanelCombo").value;
+
+        largo = largo.replace("Full Screen",LargoMaximo);
+        ancho = ancho.replace("Full Screen",AnchoMaximo);
+
+        if(largo != "" && ancho != "" && color != "" && id != "" && nombre != ""){ 
+            
+            var ConversionAncho = Math.round((screen.width*ancho)/AnchoMaximo); 
+            var ConversionLargo = Math.round((screen.height*largo)/LargoMaximo); 
+
+            var Texto = "from tkinter import *\n"+
+                        id+"= Tk()\n"+
+                        id+".title('"+nombre+"')\n"+
+                        id+".geometry('"+ConversionAncho+"x"+ConversionLargo+"')\n"+
+                        id+".config(bg='"+color+"')\n";
+
+            if(CTamaño == "No"){
+                Texto = Texto + id+".resizable(0,0)\n";  // prohibe el cambio de tamaño
+            }
+            var Texto1 = id+".mainloop()"
+           
+            if(Contenido.length == 0){
+                Variables.push(id);
+                Contenido.push(Texto);
+                Contenido.push(Texto1);
+            }
+            else{
+                for (let i = 0; i < Contenido.length; i++) {
+                    if(Contenido[i].includes("from tkinter import *")){
+                        Variables[i] = id;
+                        Contenido[i]= Texto;
+                        Contenido[Contenido.length-1] = Texto1;
+                        break;
+                    }
+                }
+            }
+            
+        }
+        else{
+            alert("Llene todos los campos");
+        }
+
+    }
+   
+   
+   
+   
+    document.getElementById("ExtraerDatos").onclick = function(e){
+        var Programacion = "";
+        for (let i = 0; i < Contenido.length; i++) {
+          Programacion = Programacion+Contenido[i];  
+        }
+        console.log(Programacion)
+    }
+
+    // for (let i = 0; i < 100; i++) {
+        
+    // var LeerDiv = document.getElementById("interfaz");
+    // var nuevoDiv = document.createElement("div");
+    // nuevoDiv.className = "Panel";
+    // nuevoDiv.id="Panel"+i;
+    // LeerDiv.appendChild(nuevoDiv);
+    // }
+
+  
+
+</script>
+
+<script type="module">
+
+    
+
+
+
+    document.getElementById("ConfPanelAncho").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfPanelAncho").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }   
+     
+  };
+    document.getElementById("ConfPanelLargo").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfPanelLargo").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }        
+
+
+  };
+
+</script>
+
