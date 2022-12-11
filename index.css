@@ -1,0 +1,284 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html,body{
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;  
+}
+
+
+#Principal{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#P1{
+    flex: 3;
+    display: flex;  
+}
+#P2{
+    flex: 1;
+    background-color: #1a1c1d;
+    border: rgb(94, 94, 94) 2px solid;
+    overflow-y: scroll;
+    height: 99%;
+}
+
+
+
+
+.draw-border {
+    box-shadow: inset 0 0 0 4px #58afd1;
+    color: #58afd1;
+    transition: color 0.25s 0.0833333333s;
+    position: relative;
+    width: 90%;
+    margin-bottom: 2%;
+   }
+   
+   .draw-border::before, .draw-border::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+   }
+   
+   .draw-border::before {
+    border-bottom-width: 4px;
+    border-left-width: 4px;
+   }
+   
+   .draw-border::after {
+    border-top-width: 4px;
+    border-right-width: 4px;
+   }
+   
+   .draw-border:hover {
+    color: #ffe593;
+   }
+   
+   .draw-border:hover::before, .draw-border:hover::after {
+    border-color: #ffe593;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+   }
+   
+   .draw-border:hover::before {
+    transition-delay: 0s, 0s, 0.25s;
+   }
+   
+   .draw-border:hover::after {
+    transition-delay: 0s, 0.25s, 0s;
+   }
+   
+   .btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    font: 700 17px "Roboto Slab", sans-serif;
+    padding: 1em 2em;
+    letter-spacing: 0.05rem;
+   }
+   
+   .btn:focus {
+    outline: 2px dotted #55d7dc;
+   }
+   
+   
+
+
+
+#interfaz{
+    margin-left: 4%;
+    margin-top: 3%;
+    width: 90%;
+    height: 90%;
+    border:3px solid rgba(56, 56, 56, 0.199);
+    -webkit-box-shadow: 12px 18px 16px -12px rgba(0,0,0,0.38);
+    -moz-box-shadow: 12px 18px 16px -12px rgba(0,0,0,0.38);
+    box-shadow: 12px 18px 16px -12px rgba(0,0,0,0.38); 
+    background-color: #B2AEAE;
+    overflow: hidden;
+}
+
+.Entry{
+    border-radius: 5px;
+    width: 60%;
+    height: 30px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+.Entry1{
+    border-radius: 5px;
+    width: 90%;
+    height: 30px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 3%;
+}
+.Combobox{
+    border-radius: 5px;
+    width: 60%;
+    height: 30px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+.Ajustes{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    height: auto;
+}
+
+.titulo{
+    display: inline-block;
+    color: #fff;
+    font-size: 15px;
+    width: 20%;
+    margin-left: 7%;
+    margin-bottom: 2%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.titulo1{
+    color: #fff;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 2%;    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.buttonConsola{
+    width: 90%;
+    height: 32px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 3%;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+.buttonConsola:hover{
+    background-color: #769ba7;
+    color: #fff;
+}
+
+#HerramientasDV{
+    display: none;
+    text-align: center;
+    width: 100%;
+}
+#PanelHerramientas{
+    width: 30%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#ConfSeccion{
+    display: none;
+}
+#ConfText{
+    display: none;
+}
+#ConfEntry{
+    display: none;
+}
+#ConfExtraDatos{
+    display: none;
+}
+   
+.AjusteTam{
+    text-align: center;
+}
+.ajusteTam{
+    width: 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    
+
+}
+.EntryTam{
+    border-radius: 5px;
+    width: 20%;
+    height: 30px;
+    color: black;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+.Seccion{
+    margin-top: 2.4%;
+    margin-left: 3%;
+    top: 0px;
+    left: 0px;
+    background-color: #C0A275;
+    display: inline-block;
+    position: absolute;
+}
+.Texto{    
+    margin-top: 2.4%;
+    margin-left: 3%;
+    top: 0px;
+    left: 0px;
+    color: #000000;
+    background-color: #C0A275;
+    font-size: 12px;
+    font-family: Arial;
+    position: absolute;    
+    display: inline-block;
+}
+.Input{
+    margin-top: 2.4%;
+    margin-left: 3%;
+    width: 150px;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    color: #000000;
+    background-color: #C0A275;
+    font-size: 12px;
+    font-family: Arial;
+    position: absolute;    
+    display: inline-block;
+}
+textarea{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 1%;
+}
+
+#ConfExtraDatosCopy{
+    text-align: left;
+    margin: 2.5%;
+    width: 90%;
+    height: 60%;
+    max-width: 90%;
+    font-size: 12px;
+}
+

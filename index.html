@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="Principal">
+
+        <div id="P1">
+
+            <div id="interfaz">
+
+            </div>
+
+        </div>
+        <div  id="P2">
+            
+            <div id="HerramientasDV">
+                <a><img id="PanelHerramientas" src="Imagenes/PanelOpciones.png"></a>
+                <br>
+                <button class="btn draw-border" id="VisualizarCP" type="button">Configuración del panel</button>
+                <button class="btn draw-border" id="VisualizarCF" type="button">Lienzo</button>
+                <button class="btn draw-border" id="VisualizarCT" type="button">Texto</button>
+                <button class="btn draw-border" id="VisualizarCE" type="button">Entry</button>
+                <button class="btn draw-border" id="VisualizarCB" type="button">Button</button>
+                <button class="btn draw-border" type="button" id="ExtraerDatos">Extraer Datos</button>
+            </div>
+
+            <!-- CONFIGURACION DEL PANEL -->
+            <div class="Ajustes" id="ConfPanel">
+                <h1 class="titulo">Id</h1>
+                <input  class="Entry" id="ConfPanelId" autocomplete="off"  type="text" title="Nombre de la variable" value="Main">
+                <br>
+                <h1 class="titulo">Nombre</h1>
+                <input  class="Entry" id="ConfPanelNombre" autocomplete="off" type="text" title="Nombre del panel" value="Pantalla Principal">
+                <br>
+                <h1 class="titulo">Ancho</h1>
+                <input  class="Entry" id="ConfPanelAncho" autocomplete="off" maxlength="4" type="text" title="Ancho del panel" value="Full Screen">
+                <br>
+                <h1 class="titulo">Largo</h1>
+                <input  class="Entry" id="ConfPanelLargo" autocomplete="off" maxlength="4" type="text" title="Largo del panel" value="Full Screen">
+                <br>
+
+                <button type="button" class="buttonConsola" id="ConfPanelEditarTamaño">Editar Tamaño</button>
+
+                <br>
+                <h1 class="titulo">Color del Panel</h1>
+                <input  class="Entry" id="ConfPanelColor" type="color" value="#B2AEAE">
+                <button class="buttonConsola" type="button" id="ConfPanelEditarColor">Editar Colores</button>
+
+                <br>
+                <h1 class="titulo">Permitir edición de tamaño</h1>
+                <select class="Combobox" id="ConfPanelCombo"> 
+                    <option value="Si" selected>Si</option>
+                    <option value="No">No</option>
+                </select>
+                <button type="button" class="buttonConsola" id="ConfPanelEditarGuardar">Guardar Cambios</button>
+
+
+            </div>
+
+            <!-- CONFIGURACION DE LA SECCION -->
+            <div class="Ajustes" id="ConfSeccion">
+                <h1 class="titulo">Id</h1>
+                <input  class="Entry" id="ConfSeccionId" autocomplete="off"  type="text" title="Nombre de la variable" value="New Element">
+                <br>
+                <h1 class="titulo">Ancho</h1>
+                <input  class="Entry" id="ConfSeccionAncho" autocomplete="off" maxlength="4" type="text" title="Ancho de la sección" value="200">
+                <br>
+                <h1 class="titulo">Largo</h1>
+                <input  class="Entry" id="ConfSeccionLargo" autocomplete="off" maxlength="4" type="text" title="Largo de la sección" value="200">
+                <br>
+                <button type="button" class="buttonConsola" id="ConfSeccionEditarTamaño">Editar Tamaño</button>
+                <br>
+                <h1 class="titulo">Color de la sección</h1>
+                <input  class="Entry" id="ConfSeccionColor" type="color" value="#C0A275">
+                <button class="buttonConsola" type="button" id="ConfSeccionEditarColor">Editar Colores</button>
+                <br>
+                <div class="AjusteTam">
+                    <input  class="EntryTam" id="ConfSeccionMT" autocomplete="off" maxlength="4" type="text" title="Margen Top" value="0">
+                    <br>
+                    <img class="ajusteTam" src="Imagenes/AjusteTam.png">
+                    <br>
+                    <input  class="EntryTam" id="ConfSeccionML" autocomplete="off" maxlength="4" type="text" title="Margen Left" value="0">
+
+                </div>
+                <br>
+                <button class="buttonConsola" type="button" id="ConfSeccionEditarTam">Editar Posicionamiento</button>
+                <button class="buttonConsola" type="button" id="ConfSeccionGuardar">Guardar</button>
+                <button class="buttonConsola" type="button" id="ConfSeccionCancelar">Cancelar</button>
+
+            </div>
+
+
+            <!-- CONFIGURACION DEL TEXTO -->
+            <div class="Ajustes" id="ConfText">
+                <h1 class="titulo">Id</h1>
+                <input  class="Entry" id="ConfTextId" autocomplete="off"  type="text" title="Nombre de la variable" value="New Element">
+                <br>
+                <h1 class="titulo1"  >Ingrese un mensaje</h1>
+                <textarea id="ConfTextTexto">Hola Mundo</textarea>
+                <br>
+                <h1 class="titulo1">Color de la letra</h1>
+                <input  class="Entry1" id="ConfTextColor" type="color" value="#000000">
+                <br>
+                <h1 class="titulo1">Color de fondo</h1>
+                <input  class="Entry1" id="ConfTextColorB" type="color" value="#C0A275">
+                <br>
+                <button class="buttonConsola" type="button" id="ConfTextEditarColor">Editar Colores</button>
+                <br>
+                <div class="AjusteTam">
+                    <input  class="EntryTam" id="ConfTextMT" autocomplete="off" maxlength="4" type="text" title="Margen Top" value="0">
+                    <br>
+                    <img class="ajusteTam" src="Imagenes/AjusteTam.png">
+                    <br>
+                    <input  class="EntryTam" id="ConfTextML" autocomplete="off" maxlength="4" type="text" title="Margen Left" value="0">
+
+                </div>
+                <br>
+                <button class="buttonConsola" type="button" id="ConfTextEditarTam">Editar Posicionamiento</button>
+                <h1 class="titulo1">Tamaño de letra</h1>
+                <input  class="Entry1" id="ConfTextSize" autocomplete="off"  type="text" value="12" maxlength="2">
+                <button class="buttonConsola" type="button" id="ConfTextEditarSize">Editar tamaño de letra</button>
+                <br>
+                <h1 class="titulo1">Tipo de letra</h1>
+                <select class="Entry1" id="ConfTextCombo"> 
+                    <option value="Arial" selected>Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Century Gothic">Century Gothic</option>
+                    <option value="Segoe UI">Segoe UI</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Cambria">Cambria</option>
+                    <option value="Calibri">Calibri</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>                   
+                    <option value="Gigi">Gigi</option>
+                    
+
+
+                </select>
+                <button class="buttonConsola" type="button" id="ConfTextEditarFamily">Editar tipo de letra</button>
+                <br>
+                <h1 class="titulo1">Justificación del Texto</h1>
+                <select class="Entry1" id="ConfTextComboJust"> 
+                    <option value="LEFT" selected>DERECHA</option>
+                    <option value="CENTER">CENTRO</option>
+                    <option value="RIGHT">IZQUIERDA</option>
+                </select>
+                <button class="buttonConsola" type="button" id="ConfTextEditarJust">Justificar Texto</button>
+                <br>
+                <h1 class="titulo1">Estilo de Texto</h1>
+                <select class="Entry1" id="ConfTextComboEstilo"> 
+                    <option value="normal" selected>NORMAL</option>
+                    <option value="italic">ITALIC</option>
+                    <option value="bold">BOLD</option>
+                </select>
+                <button class="buttonConsola" type="button" id="ConfTextEditarEstilo">Modificar Estilo</button>
+                <br>
+                <button class="buttonConsola" type="button" id="ConfTextGuardar">Guardar</button>
+                <button class="buttonConsola" type="button" id="ConfTextCancelar">Cancelar</button>
+            </div>
+
+
+              <!-- CONFIGURACION DEL ENTRY -->
+              <div class="Ajustes" id="ConfEntry">
+                <h1 class="titulo">Id</h1>
+                <input  class="Entry" id="ConfEntryId" autocomplete="off"  type="text" title="Nombre de la variable" value="New Element">
+                <br>               
+                <h1 class="titulo1">Color de la letra</h1>
+                <input  class="Entry1" id="ConfEntryColor" type="color" value="#000000">
+                <br>
+                <h1 class="titulo1">Color de fondo</h1>
+                <input  class="Entry1" id="ConfEntryColorB" type="color" value="#C0A275">
+                <br>
+                <h1 class="titulo1">Color del puntero</h1>
+                <input  class="Entry1" id="ConfEntryColorP" type="color" value="#000000">
+                <br>
+                <button class="buttonConsola" type="button" id="ConfEntryEditarColor">Editar Colores</button>
+                <br>
+
+                <h1 class="titulo1">Ancho del Entry</h1>
+                <input  class="Entry1" id="ConfEntryancho" autocomplete="off"  type="text" value="150" maxlength="3">
+                <button class="buttonConsola" type="button" id="ConfEntryEditarAncho">Editar Ancho</button>
+                <br>
+
+                <div class="AjusteTam">
+                    <input  class="EntryTam" id="ConfEntryMT" autocomplete="off" maxlength="4" type="text" title="Margen Top" value="0">
+                    <br>
+                    <img class="ajusteTam" src="Imagenes/AjusteTam.png">
+                    <br>
+                    <input  class="EntryTam" id="ConfEntryML" autocomplete="off" maxlength="4" type="text" title="Margen Left" value="0">
+
+                </div>
+                <br>
+                <button class="buttonConsola" type="button" id="ConfEntryEditarTam">Editar Posicionamiento</button>
+                <h1 class="titulo1">Tamaño de letra</h1>
+                <input  class="Entry1" id="ConfEntrySize" autocomplete="off"  type="text" value="12" maxlength="2">
+                <button class="buttonConsola" type="button" id="ConfEntryEditarSize">Editar tamaño de letra</button>
+                <br>
+                <h1 class="titulo1">Tipo de letra</h1>
+                <select class="Entry1" id="ConfEntryCombo"> 
+                    <option value="Arial" selected>Arial</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Century Gothic">Century Gothic</option>
+                    <option value="Segoe UI">Segoe UI</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Cambria">Cambria</option>
+                    <option value="Calibri">Calibri</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>                   
+                    <option value="Gigi">Gigi</option>
+                    
+
+
+                </select>
+                <button class="buttonConsola" type="button" id="ConfEntryEditarFamily">Editar tipo de letra</button>
+                <br>
+                <h1 class="titulo1">Justificación del Texto</h1>
+                <select class="Entry1" id="ConfEntryComboJust"> 
+                    <option value="LEFT" selected>DERECHA</option>
+                    <option value="CENTER">CENTRO</option>
+                    <option value="RIGHT">IZQUIERDA</option>
+                </select>
+                <button class="buttonConsola" type="button" id="ConfEntryEditarJust">Justificar Texto</button>
+                <br>
+                <h1 class="titulo1">Estilo de Texto</h1>
+                <select class="Entry1" id="ConfEntryComboEstilo"> 
+                    <option value="normal" selected>NORMAL</option>
+                    <option value="italic">ITALIC</option>
+                    <option value="bold">BOLD</option>
+                </select>
+                <button class="buttonConsola" type="button" id="ConfEntryEditarEstilo">Modificar Estilo</button>
+                <br>
+                <button class="buttonConsola" type="button" id="ConfEntryGuardar">Guardar</button>
+                <button class="buttonConsola" type="button" id="ConfEntryCancelar">Cancelar</button>
+            </div>
+
+
+               <!-- CONFIGURACION DEL EXTRAER DATOS -->
+               <div class="Ajustes" id="ConfExtraDatos">
+                <br><br>  
+                <h1 class="titulo1">CÓDIGO GENERADO</h1>                             
+                <textarea id="ConfExtraDatosCopy"></textarea>
+                <button class="buttonConsola" type="button" id="ConfExtraDatosGuardar">Copiar Código</button>
+                <button class="buttonConsola" type="button" id="ConfExtraRegresar">Regresar</button>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
+
+<!-- LIMITACIONES DEL INPUT -->
+<script type="module">
+
+
+    document.getElementById("ConfPanelAncho").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfPanelAncho").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }   
+     
+  };
+    document.getElementById("ConfPanelLargo").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfPanelLargo").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }        
+
+
+  };
+    document.getElementById("ConfPanelId").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfPanelId").value;
+        var letras = "abcdefghijklmnopqrstuvwxyz";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }        
+
+
+    };
+
+
+  document.getElementById("ConfSeccionAncho").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfSeccionAncho").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }   
+     
+  };
+  document.getElementById("ConfSeccionLargo").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfSeccionLargo").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }   
+     
+  };
+  document.getElementById("ConfSeccionMT").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfSeccionMT").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }   
+     
+  };
+  document.getElementById("ConfSeccionML").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfSeccionML").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }   
+     
+  };
+  document.getElementById("ConfSeccionId").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfSeccionId").value;
+        var letras = "0987654321abcdefghijklmnopqrstuvwxyz";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }        
+
+
+    };
+  
+  
+  document.getElementById("ConfTextMT").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfTextMT").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }   
+     
+  };
+  document.getElementById("ConfTextML").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfTextML").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }   
+     
+  };
+  document.getElementById("ConfTextSize").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfTextSize").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }   
+     
+  };
+  document.getElementById("ConfTextId").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfTextId").value;
+        var letras = "0987654321abcdefghijklmnopqrstuvwxyz";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }        
+    };
+
+ 
+
+ 
+  document.getElementById("ConfEntryMT").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfEntryMT").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }   
+     
+  };
+  document.getElementById("ConfEntryML").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfEntryML").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }   
+     
+  };
+  document.getElementById("ConfEntrySize").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfEntrySize").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }   
+     
+  };
+  document.getElementById("ConfEntryancho").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfEntryancho").value;
+        var letras = "0987654321";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }   
+     
+  };
+  document.getElementById("ConfEntryId").onkeypress = function() {              
+        var Extraer = document.getElementById("ConfEntryId").value;
+        var letras = "0987654321abcdefghijklmnopqrstuvwxyz";
+        var key = event.keyCode;
+        var tecla = String.fromCharCode(key).toLowerCase();
+        var especiales = [8];    
+        var tecla_especial = false
+        for(var i in especiales) {
+            if(key == especiales[i]) {
+                tecla_especial = true;
+                break;
+            }
+        }  
+        if(letras.indexOf(tecla) == -1 && !tecla_especial){
+            return false;
+        }        
+    };
+
+ 
+
+  
+</script>
+
+
+<!-- CODIGO EJECUTABLE -->
+<script type="module">
+
+    //.client conocer el ancho y largo de un componente
+    var AnchoMaximo = document.getElementById("interfaz").clientWidth;
+    var LargoMaximo = document.getElementById("interfaz").clientHeight;
+    var Variables = [];
+    var ContenidoEdicion = ["Main"];
+    var Contenido =[];
+    var idAnterior = "New Element";
+
+    //Configuracion del panel
+    document.getElementById("VisualizarCP").onclick = function(e){
+        document.getElementById("ConfPanel").style.display = "inline-block";
+        document.getElementById("ConfSeccion").style.display = "none";
+        document.getElementById("ConfText").style.display = "none";
+        document.getElementById("ConfEntry").style.display = "none";
+        document.getElementById("ConfExtraDatos").style.display = "none";
+        document.getElementById("HerramientasDV").style.display="none";
+    }
+    document.getElementById("ConfPanelEditarTamaño").onclick = function(e){
+        var largo = document.getElementById("ConfPanelLargo").value;
+        var ancho = document.getElementById("ConfPanelAncho").value;
+
+        if(largo == "Full Screen"){
+            largo = LargoMaximo;
+        }
+        if(ancho == "Full Screen"){
+            ancho = AnchoMaximo;
+        }
+
+        if(largo != "" && ancho != ""){
+            if(ancho < AnchoMaximo && largo < LargoMaximo){
+                document.getElementById("interfaz").style.height = largo+"px";
+                document.getElementById("interfaz").style.width = ancho+"px";
+            }
+            else{
+                if(ancho >= AnchoMaximo){
+                    document.getElementById("interfaz").style.width = AnchoMaximo+"px";
+                    document.getElementById("ConfPanelAncho").value = "Full Screen";
+                }
+
+                if(largo >= LargoMaximo){
+                    document.getElementById("interfaz").style.height = LargoMaximo+"px";
+                    document.getElementById("ConfPanelLargo").value = "Full Screen";
+                }
+                if(ancho < AnchoMaximo){
+                    document.getElementById("interfaz").style.width = ancho+"px";
+                }
+
+                if(largo < LargoMaximo){
+                    document.getElementById("interfaz").style.height = largo+"px";
+                }
+            }
+        }
+        else{
+            alert("Llene todos los campos");
+        }
+    
+   
+    }
+    document.getElementById("ConfPanelEditarColor").onclick = function(e){
+        var color = document.getElementById("ConfPanelColor").value;
+        document.getElementById("interfaz").style.backgroundColor = color;        
+    }
+    document.getElementById("ConfPanelEditarGuardar").onclick = function(e){
+
+        var largo = document.getElementById("ConfPanelLargo").value;
+        var ancho = document.getElementById("ConfPanelAncho").value;
+        var color = document.getElementById("ConfPanelColor").value;
+        var id = document.getElementById("ConfPanelId").value;
+        var nombre = document.getElementById("ConfPanelNombre").value;
+        var CTamaño = document.getElementById("ConfPanelCombo").value;
+
+        largo = largo.replace("Full Screen",LargoMaximo);
+        ancho = ancho.replace("Full Screen",AnchoMaximo);
+
+        if(largo != "" && ancho != "" && color != "" && id != "" && nombre != ""){ 
+            
+            var ConversionAncho = Math.round((screen.width*ancho)/AnchoMaximo); 
+            var ConversionLargo = Math.round((screen.height*largo)/LargoMaximo); 
+
+            var Texto = "from tkinter import *\n"+
+                        id+"= Tk()\n"+
+                        id+".title('"+nombre+"')\n"+
+                        id+".geometry('"+ConversionAncho+"x"+ConversionLargo+"')\n"+
+                        id+".config(bg='"+color+"')\n";
+
+            if(CTamaño == "No"){
+                Texto = Texto + id+".resizable(0,0)\n";  // prohibe el cambio de tamaño
+            }
+            var Texto1 = id+".mainloop()"
+           
+            if(Contenido.length == 0){
+                Variables.push(id);
+                Contenido.push(Texto);
+                Contenido.push(Texto1);
+            }
+            else{
+                for (let i = 0; i < Contenido.length; i++) {
+                    if(Contenido[i].includes("from tkinter import *")){
+                        Variables[i] = id;
+                        Contenido[i]= Texto;
+                        Contenido[Contenido.length-1] = Texto1;
+                        break;
+                    }
+                }
+            }
+            document.getElementById("HerramientasDV").style.display="inline-block";
+            document.getElementById("ConfPanel").style.display = "none";
+
+        }
+        else{
+            alert("Llene todos los campos");
+        }
+
+    }
+   
+   
+   //Crear Segmento
+    document.getElementById("VisualizarCF").onclick = function(e){
+        document.getElementById("HerramientasDV").style.display="none";
+        document.getElementById("ConfPanel").style.display = "none";
+        document.getElementById("ConfText").style.display = "none";
+        document.getElementById("ConfEntry").style.display = "none";
+        document.getElementById("ConfExtraDatos").style.display = "none";
+
+
+        document.getElementById("ConfSeccion").style.display = "inline-block";
+       
+
+        var LeerDiv = document.getElementById("interfaz");
+        var nuevoDiv = document.createElement("div");
+        nuevoDiv.className = "Seccion";
+        nuevoDiv.style.width = "200px"
+        nuevoDiv.style.height = "200px"
+        nuevoDiv.id="New Element";
+        LeerDiv.appendChild(nuevoDiv);
+    }
+    document.getElementById("ConfSeccionEditarTamaño").onclick = function(e){
+        var largo = document.getElementById("ConfSeccionLargo").value;
+        var ancho = document.getElementById("ConfSeccionAncho").value;
+        var id = document.getElementById("ConfSeccionId").value;
+        var AnchoMaximo = document.getElementById("interfaz").clientWidth;
+        var LargoMaximo = document.getElementById("interfaz").clientHeight;
+        if(largo != "" && ancho != ""){
+            var idModificacion = ValoracionNewElement(id);
+            
+            if(ancho < AnchoMaximo && largo < LargoMaximo){
+                document.getElementById(idModificacion).style.height = largo+"px";
+                document.getElementById(idModificacion).style.width = ancho+"px";
+            }
+            else{
+                if(ancho >= AnchoMaximo){
+                    document.getElementById(idModificacion).style.width = AnchoMaximo+"px";
+                    document.getElementById("ConfSeccionAncho").value = "Full Screen";
+                }
+
+                if(largo >= LargoMaximo){
+                    document.getElementById(idModificacion).style.height = LargoMaximo+"px";
+                    document.getElementById("ConfSeccionLargo").value = "Full Screen";
+                }
+                if(ancho < AnchoMaximo){
+                    document.getElementById(idModificacion).style.width = ancho+"px";
+                }
+
+                if(largo < LargoMaximo){
+                    document.getElementById(idModificacion).style.height = largo+"px";
+                }
+            }
+
+
+        }
+        else{
+            alert("Llene todos los campos");
+        }
+    
+    }
+    document.getElementById("ConfSeccionEditarColor").onclick = function(e){
+        var id = document.getElementById("ConfSeccionId").value;
+        var color = document.getElementById("ConfSeccionColor").value;
+        var idModificacion = ValoracionNewElement(id);
+        document.getElementById(idModificacion).style.backgroundColor = color;        
+    }
+    document.getElementById("ConfSeccionEditarTam").onclick = function(e){
+        var Top = document.getElementById("ConfSeccionMT").value;
+        var Left = document.getElementById("ConfSeccionML").value;
+        var id = document.getElementById("ConfSeccionId").value;
+        var idModificacion = ValoracionNewElement(id);
+
+        if(Top != "" && Left != "" ){
+            document.getElementById(idModificacion).style.top = Top+"px";
+            document.getElementById(idModificacion).style.left = Left+"px";
+        }
+        else{
+            alert("Llene todos los campos");
+        }
+    }
+    document.getElementById("ConfSeccionGuardar").onclick = function(e){
+        var largo = document.getElementById("ConfSeccionLargo").value;
+        var ancho = document.getElementById("ConfSeccionAncho").value;
+        var color = document.getElementById("ConfSeccionColor").value;
+        var Top = document.getElementById("ConfSeccionMT").value;
+        var Left = document.getElementById("ConfSeccionML").value;
+        var id = document.getElementById("ConfSeccionId").value;
+        var idModificacion = ValoracionNewElement(id);
+        var AnchoMaximoA = document.getElementById("interfaz").clientWidth;
+        var LargoMaximoA = document.getElementById("interfaz").clientHeight;
+        largo = largo.replace("Full Screen",LargoMaximoA);
+        ancho = ancho.replace("Full Screen",AnchoMaximoA);
+        if(largo != "" && ancho != "" && Top != "" && Left != "" && document.getElementById(idModificacion).value != ""){
+            
+            Variables.push(idModificacion);
+            var ConversionAncho = Math.round(((screen.width*ancho)/AnchoMaximoA)/((7*AnchoMaximo)/AnchoMaximoA)); 
+            var ConversionLargo = Math.round(((screen.height*largo)/LargoMaximoA)/((15*LargoMaximo)/LargoMaximoA));
+            var ConversionTop = Math.round(Top*1.3);
+            var ConversionLeft = Math.round(Left*1.5);
+
+
+            var Text = idModificacion + " = Label( "+Variables[0]+", width= "+(ConversionAncho)+", height="+(ConversionLargo)+",bg= '"+color+"').place(x ="+ConversionLeft+", y = "+ConversionTop+")\n";
+            Contenido.splice(Contenido.length-1,0,Text);  
+            idAnterior = "New Element";
+
+            document.getElementById("ConfPanel").style.display = "none";
+            document.getElementById("HerramientasDV").style.display="inline-block";
+            document.getElementById("ConfSeccion").style.display = "none";
+            document.getElementById("ConfSeccionId").value = "New Element";
+            document.getElementById("ConfSeccionAncho").value = "200";
+            document.getElementById("ConfSeccionLargo").value = "200";
+            document.getElementById("ConfSeccionColor").value = "#C0A275";
+            document.getElementById("ConfSeccionMT").value = "0";
+            document.getElementById("ConfSeccionML").value = "0"; 
+        }
+        else{
+            alert("Llene todos los campos");
+        }
+    }
+    document.getElementById("ConfSeccionCancelar").onclick = function(e){
+        document.getElementById(idAnterior).remove();
+        idAnterior = "New Element";
+        document.getElementById("ConfPanel").style.display = "none";
+        document.getElementById("HerramientasDV").style.display="inline-block";
+        document.getElementById("ConfSeccion").style.display = "none";
+        document.getElementById("ConfSeccionId").value = "New Element";
+        document.getElementById("ConfSeccionAncho").value = "200";
+        document.getElementById("ConfSeccionLargo").value = "200";
+        document.getElementById("ConfSeccionColor").value = "#C0A275";
+        document.getElementById("ConfSeccionMT").value = "0";
+        document.getElementById("ConfSeccionML").value = "0";
+    }
+
+
+    //Crear Texto
+    document.getElementById("VisualizarCT").onclick = function(e){
+        document.getElementById("ConfPanel").style.display = "none";
+        document.getElementById("ConfSeccion").style.display = "none";
+        document.getElementById("HerramientasDV").style.display="none";
+        document.getElementById("ConfEntry").style.display = "none";
+        document.getElementById("ConfExtraDatos").style.display = "none";
+        document.getElementById("ConfText").style.display = "inline-block";
+
+        var LeerDiv = document.getElementById("interfaz");
+        var nuevoText = document.createElement("p");
+        nuevoText.className = "Texto";
+        nuevoText.innerHTML = "Hola Mundo";
+        nuevoText.id="New Element";
+        LeerDiv.appendChild(nuevoText);
+
+    }
+    document.getElementById("ConfTextEditarColor").onclick = function(e){
+        var id = document.getElementById("ConfTextId").value;
+        var mensaje = document.getElementById("ConfTextTexto").value;
+        var colorT = document.getElementById("ConfTextColor").value;
+        var colorB = document.getElementById("ConfTextColorB").value;
+        var idModificacion = ValoracionNewElement(id);
+        if(mensaje != ""){
+            var conversionMensaje = mensaje.replaceAll("\n","<br>");
+            document.getElementById(idModificacion).innerHTML = conversionMensaje;
+            document.getElementById(idModificacion).style.color = colorT;
+            document.getElementById(idModificacion).style.backgroundColor = colorB;
+        }
+        else{
+            alert("Ingrese un mensaje");
+        }
+
+    }
+    document.getElementById("ConfTextEditarTam").onclick = function(e){
+        var id = document.getElementById("ConfTextId").value;  
+        var mensaje = document.getElementById("ConfTextTexto").value;
+        var Top = document.getElementById("ConfTextMT").value;      
+        var Left = document.getElementById("ConfTextML").value;      
+        var idModificacion = ValoracionNewElement(id);
+        if(Top != "" && Left != ""){
+            if(mensaje != ""){
+                var conversionMensaje = mensaje.replaceAll("\n","<br>");
+                document.getElementById(idModificacion).innerHTML = conversionMensaje;
+                document.getElementById(idModificacion).style.top = Top+"px";
+                document.getElementById(idModificacion).style.left = Left+"px";   
+            }
+            else{
+                alert("Ingrese un mensaje");
+            }            
+        }
+        else{
+            alert("LLene todos los campos");
+        }
+
+    }
+    document.getElementById("ConfTextEditarSize").onclick = function(e){
+        var id = document.getElementById("ConfTextId").value;  
+        var idModificacion = ValoracionNewElement(id);
+        var Size = document.getElementById("ConfTextSize").value;  
+        var mensaje = document.getElementById("ConfTextTexto").value;
+
+        if(Size != ""){
+            if(mensaje != ""){
+                var conversionMensaje = mensaje.replaceAll("\n","<br>");
+                document.getElementById(idModificacion).innerHTML = conversionMensaje;
+                document.getElementById(idModificacion).style.fontSize = Size+"px";
+            }
+            else{
+                alert("Ingrese un mensaje");
+            }     
+        }
+        else{
+            alert("Llene todos los campos");
+        }
+    }
+    document.getElementById("ConfTextEditarFamily").onclick = function(e){
+        var id = document.getElementById("ConfTextId").value;  
+        var idModificacion = ValoracionNewElement(id);
+        var Family = document.getElementById("ConfTextCombo").value;  
+        var mensaje = document.getElementById("ConfTextTexto").value;
+        if(mensaje != ""){
+            var conversionMensaje = mensaje.replaceAll("\n","<br>");
+            document.getElementById(idModificacion).innerHTML = conversionMensaje;
+            document.getElementById(idModificacion).style.fontFamily = Family;
+        }
+        else{
+            alert("Ingrese un mensaje");
+        } 
+    }
+    document.getElementById("ConfTextEditarJust").onclick = function(e){
+        var id = document.getElementById("ConfTextId").value;  
+        var idModificacion = ValoracionNewElement(id);
+        var Just = document.getElementById("ConfTextComboJust").value;  
+        var mensaje = document.getElementById("ConfTextTexto").value;
+        if(mensaje != ""){
+            var conversionMensaje = mensaje.replaceAll("\n","<br>");
+            document.getElementById(idModificacion).innerHTML = conversionMensaje;
+            document.getElementById(idModificacion).style.textAlign = Just;
+        }
+        else{
+            alert("Ingrese un mensaje");
+        } 
+    }
+    document.getElementById("ConfTextEditarEstilo").onclick = function(e){
+        var id = document.getElementById("ConfTextId").value;  
+        var idModificacion = ValoracionNewElement(id);
+        var Estilo = document.getElementById("ConfTextComboEstilo").value;  
+        var mensaje = document.getElementById("ConfTextTexto").value;
+        if(mensaje != ""){
+            var conversionMensaje = mensaje.replaceAll("\n","<br>");
+            document.getElementById(idModificacion).innerHTML = conversionMensaje;
+
+            if(Estilo =="bold"){
+                document.getElementById(idModificacion).style.fontWeight = Estilo;
+                document.getElementById(idModificacion).style.fontStyle = "normal";
+            }
+            else{
+                document.getElementById(idModificacion).style.fontWeight = 100;
+                document.getElementById(idModificacion).style.fontStyle = Estilo;  
+            }
+            
+        }
+        else{
+            alert("Ingrese un mensaje");
+        } 
+    }
+    document.getElementById("ConfTextGuardar").onclick = function(e){
+        var id = document.getElementById("ConfTextId").value;  
+        var Top = document.getElementById("ConfTextMT").value;      
+        var Left = document.getElementById("ConfTextML").value;  
+        var mensaje = document.getElementById("ConfTextTexto").value;
+        var colorT = document.getElementById("ConfTextColor").value;
+        var colorB = document.getElementById("ConfTextColorB").value;
+        var Size = document.getElementById("ConfTextSize").value;  
+        var Family = document.getElementById("ConfTextCombo").value;  
+        var Just = document.getElementById("ConfTextComboJust").value;  
+        var Estilo = document.getElementById("ConfTextComboEstilo").value;  
+        var idModificacion = ValoracionNewElement(id);
+        if(document.getElementById(idModificacion).value != ""){
+            var ConversionTop = Math.round(Top*1.3);
+            var ConversionLeft = Math.round(Left*1.5);
+            var conversionMensaje = mensaje.replaceAll("\n","\\n");
+            var Text = idModificacion + " = Label( "+Variables[0]+", text= '"+conversionMensaje+"',bg= '"+colorB+"',fg= '"+colorT+"',font=('"+Family+"',"+Size+",'"+Estilo+"'),justify="+Just+").place(x ="+ConversionLeft+", y = "+ConversionTop+")\n";
+            Contenido.splice(Contenido.length-1,0,Text);  
+
+            idAnterior = "New Element";
+            document.getElementById("ConfPanel").style.display = "none";
+            document.getElementById("HerramientasDV").style.display="inline-block";
+            document.getElementById("ConfText").style.display = "none";
+            document.getElementById("ConfTextId").value = "New Element";
+            document.getElementById("ConfTextTexto").value = "Hola Mundo";
+            document.getElementById("ConfTextColor").value = "#000000";
+            document.getElementById("ConfTextColorB").value = "#C0A275";
+            document.getElementById("ConfTextMT").value = "0";
+            document.getElementById("ConfTextML").value = "0";
+            document.getElementById("ConfTextSize").value = "12";
+            document.getElementById("ConfTextCombo").value = "Arial";
+            document.getElementById("ConfTextComboJust").value = "LEFT";
+            document.getElementById("ConfTextComboEstilo").value = "normal";
+             
+
+        }     
+
+    }
+    document.getElementById("ConfTextCancelar").onclick = function(e){
+        document.getElementById(idAnterior).remove();
+        idAnterior = "New Element";
+        document.getElementById("ConfPanel").style.display = "none";
+        document.getElementById("HerramientasDV").style.display="inline-block";
+        document.getElementById("ConfText").style.display = "none";
+        document.getElementById("ConfTextId").value = "New Element";
+        document.getElementById("ConfTextTexto").value = "Hola Mundo";
+        document.getElementById("ConfTextColor").value = "#000000";
+        document.getElementById("ConfTextColorB").value = "#C0A275";
+        document.getElementById("ConfTextMT").value = "0";
+        document.getElementById("ConfTextML").value = "0";
+        document.getElementById("ConfTextSize").value = "12";
+        document.getElementById("ConfTextCombo").value = "Arial";
+        document.getElementById("ConfTextComboJust").value = "LEFT";
+        document.getElementById("ConfTextComboEstilo").value = "normal";
+            
+    }
+
+
+    //Crear Entry
+    document.getElementById("VisualizarCE").onclick = function(e){
+        document.getElementById("ConfPanel").style.display = "none";
+        document.getElementById("ConfSeccion").style.display = "none";
+        document.getElementById("HerramientasDV").style.display="none";
+        document.getElementById("ConfEntry").style.display = "inline-block";
+        document.getElementById("ConfText").style.display = "none";
+        document.getElementById("ConfExtraDatos").style.display = "none";
+
+        var LeerDiv = document.getElementById("interfaz");
+        var nuevoEntry = document.createElement("input");
+        nuevoEntry.className = "Input";
+        nuevoEntry.innerHTML = "Hola Mundo";
+        nuevoEntry.id="New Element";
+        nuevoEntry.disabled = false;
+        LeerDiv.appendChild(nuevoEntry);
+
+    }
+    document.getElementById("ConfEntryEditarColor").onclick = function(e){
+        var id = document.getElementById("ConfEntryId").value;
+        var colorT = document.getElementById("ConfEntryColor").value;
+        var colorB = document.getElementById("ConfEntryColorB").value;
+        var colorP = document.getElementById("ConfEntryColorP").value;
+        var idModificacion = ValoracionNewElement(id);              
+        document.getElementById(idModificacion).style.color = colorT;
+        document.getElementById(idModificacion).style.backgroundColor = colorB;
+        document.getElementById(idModificacion).style.caretColor = colorP;
+    }
+    document.getElementById("ConfEntryEditarAncho").onclick = function(e){
+        var id = document.getElementById("ConfEntryId").value;
+        var Ancho = document.getElementById("ConfEntryancho").value;
+        var Size = document.getElementById("ConfEntrySize").value;      
+        var idModificacion = ValoracionNewElement(id);            
+
+        if(Size != ""){
+
+            var conversion = ((150*(Ancho/150)) * Size)/12;
+            if(Ancho<=12){                
+                document.getElementById(idModificacion).style.width = conversion+"px";
+                document.getElementById(idModificacion).style.fontSize = Size+"px";
+                document.getElementById("ConfEntryancho").value = conversion;
+            }
+            else{
+
+                document.getElementById(idModificacion).style.width = conversion+"px";
+                document.getElementById(idModificacion).style.fontSize = Size+"px";
+
+            }   
+        } 
+        else{
+            alert("Coloque un tamaño a la letra");
+        }    
+
+    }
+    document.getElementById("ConfEntryEditarTam").onclick = function(e){
+        var id = document.getElementById("ConfEntryId").value;  
+        var Top = document.getElementById("ConfEntryMT").value;      
+        var Left = document.getElementById("ConfEntryML").value;      
+        var idModificacion = ValoracionNewElement(id);
+        if(Top != "" && Left != ""){
+            document.getElementById(idModificacion).style.top = Top+"px";
+            document.getElementById(idModificacion).style.left = Left+"px";           
+        }
+        else{
+            alert("LLene todos los campos");
+        }
+
+    }
+    document.getElementById("ConfEntryEditarSize").onclick = function(e){
+        var id = document.getElementById("ConfEntryId").value;  
+        var Size = document.getElementById("ConfEntrySize").value;      
+        var Ancho = document.getElementById("ConfEntryancho").value;
+        var idModificacion = ValoracionNewElement(id);
+        if(Size != ""){      
+            var conversion = ((150*(Ancho/150)) * Size)/12;      
+            if(Size <= 12){
+                document.getElementById(idModificacion).style.fontSize = 12+"px";
+                document.getElementById(idModificacion).style.width = conversion+"px";
+            }
+            if(Size > 12){
+                document.getElementById(idModificacion).style.fontSize = Size+"px";
+                document.getElementById(idModificacion).style.width = conversion+"px";
+            }
+        }
+        else{
+            alert("LLene todos los campos");
+        }
+
+    }
+    document.getElementById("ConfEntryEditarFamily").onclick = function(e){
+        var id = document.getElementById("ConfEntryId").value;  
+        var idModificacion = ValoracionNewElement(id);
+        var Family = document.getElementById("ConfEntryCombo").value;  
+        document.getElementById(idModificacion).style.fontFamily = Family;
+    }
+    document.getElementById("ConfEntryEditarJust").onclick = function(e){
+        var id = document.getElementById("ConfEntryId").value;  
+        var idModificacion = ValoracionNewElement(id);
+        var Just = document.getElementById("ConfEntryComboJust").value;  
+        document.getElementById(idModificacion).style.textAlign = Just;
+    }
+    document.getElementById("ConfEntryEditarEstilo").onclick = function(e){
+        var id = document.getElementById("ConfEntryId").value;  
+        var idModificacion = ValoracionNewElement(id);
+        var Estilo = document.getElementById("ConfEntryComboEstilo").value;  
+        if(Estilo =="bold"){
+            document.getElementById(idModificacion).style.fontWeight = Estilo;
+            document.getElementById(idModificacion).style.fontStyle = "normal";
+        }
+        else{
+            document.getElementById(idModificacion).style.fontWeight = 100;
+            document.getElementById(idModificacion).style.fontStyle = Estilo;  
+        }
+    }
+    document.getElementById("ConfEntryGuardar").onclick = function(e){
+        var id = document.getElementById("ConfEntryId").value;  
+        var Top = document.getElementById("ConfEntryMT").value;      
+        var Left = document.getElementById("ConfEntryML").value;  
+        var colorT = document.getElementById("ConfEntryColor").value;
+        var colorB = document.getElementById("ConfEntryColorB").value;
+        var colorP = document.getElementById("ConfEntryColorP").value;
+        var Ancho = document.getElementById("ConfEntryancho").value;
+        var Size = document.getElementById("ConfEntrySize").value;  
+        var Family = document.getElementById("ConfEntryCombo").value;  
+        var Just = document.getElementById("ConfEntryComboJust").value;  
+        var Estilo = document.getElementById("ConfEntryComboEstilo").value;  
+        var idModificacion = ValoracionNewElement(id);
+        var Conversion = ((150*(Ancho/150)) * Size)/12;
+            
+        // CONFIGURAR EL ANCHO DEPENDIENDO DE LA PANTALLA
+        var ConversionAncho = Math.round((Conversion / (Size/2))-1);
+
+
+        var ConversionTop = Math.round(Top*1.3);
+        var ConversionLeft = Math.round(Left*1.5);
+        var Text = idModificacion + " = Entry( "+Variables[0]+", width= '"+ConversionAncho+"',insertbackground='"+colorP+"',bg= '"+colorB+"',fg= '"+colorT+"',font=('"+Family+"',"+Size+",'"+Estilo+"'),justify="+Just+").place(x ="+ConversionLeft+", y = "+ConversionTop+")\n";
+        Contenido.splice(Contenido.length-1,0,Text);       
+            
+            
+        idAnterior = "New Element";
+        document.getElementById("ConfPanel").style.display = "none";
+        document.getElementById("HerramientasDV").style.display="inline-block";
+        document.getElementById("ConfEntry").style.display = "none";
+        document.getElementById("ConfEntryId").value = "New Element";
+        document.getElementById("ConfEntryColor").value = "#000000";
+        document.getElementById("ConfEntryColorB").value = "#C0A275";
+        document.getElementById("ConfEntryColorP").value = "#000000";
+        document.getElementById("ConfEntryancho").value = "150";
+        document.getElementById("ConfEntryMT").value = "0";
+        document.getElementById("ConfEntryML").value = "0";
+        document.getElementById("ConfEntrySize").value = "12";
+        document.getElementById("ConfEntryCombo").value = "Arial";
+        document.getElementById("ConfEntryComboJust").value = "LEFT";
+        document.getElementById("ConfEntryComboEstilo").value = "normal";
+            
+    }
+    document.getElementById("ConfEntryCancelar").onclick = function(e){
+        document.getElementById(idAnterior).remove();
+        idAnterior = "New Element";
+        document.getElementById("ConfPanel").style.display = "none";
+        document.getElementById("HerramientasDV").style.display="inline-block";
+        document.getElementById("ConfEntry").style.display = "none";
+        document.getElementById("ConfEntryId").value = "New Element";
+        document.getElementById("ConfEntryColor").value = "#000000";
+        document.getElementById("ConfEntryColorB").value = "#C0A275";
+        document.getElementById("ConfEntryColorP").value = "#000000";
+        document.getElementById("ConfEntryancho").value = "150";
+        document.getElementById("ConfEntryMT").value = "0";
+        document.getElementById("ConfEntryML").value = "0";
+        document.getElementById("ConfEntrySize").value = "12";
+        document.getElementById("ConfEntryCombo").value = "Arial";
+        document.getElementById("ConfEntryComboJust").value = "LEFT";
+        document.getElementById("ConfEntryComboEstilo").value = "normal";            
+    }
+
+
+
+    function ValoracionNewElement(id){
+        if(id=="New Element"){
+            alert("Ingrese un nuevo id");
+        }
+        else{
+            if(id == ""){
+                alert("Ingrese Id");
+            }
+            else{
+
+                if(id.charAt(0) != "0" && id.charAt(0) != "1" && id.charAt(0) != "2" && id.charAt(0) != "3" && id.charAt(0) != "4" && id.charAt(0) != "5" && id.charAt(0) != "6" &&
+                id.charAt(0) != "7" && id.charAt(0) != "8" && id.charAt(0) != "9"){
+                    var activador = 0;
+                    for (let i = 0; i < Variables.length; i++) {
+                        if(id == Variables[i]){
+                            activador = 1;
+                        }
+                    }
+                    if(activador == 0){
+                        document.getElementById(idAnterior).id=id;
+                        idAnterior = id;
+                        return id;
+                    }
+                    else{
+                        alert(id + " ya se encuentra en uso");
+                    }
+                }
+                else{
+                    alert("El id no debe iniciar con un número");
+                }
+
+
+
+                
+            }
+        }
+    }
+
+//    //EXTRACCION DE LOS DATOS
+    document.getElementById("ExtraerDatos").onclick = function(e){
+        document.getElementById("ConfExtraDatos").style.display = "inline";
+        document.getElementById("ConfPanel").style.display = "none";
+        document.getElementById("ConfSeccion").style.display = "none";
+        document.getElementById("HerramientasDV").style.display="none";
+        document.getElementById("ConfEntry").style.display = "none";
+        document.getElementById("ConfText").style.display = "none";
+        var Programacion = "";
+        for (let i = 0; i < Contenido.length; i++) {
+          Programacion = Programacion+Contenido[i];  
+        }
+        document.getElementById("ConfExtraDatosCopy").value = Programacion;        
+    }
+    document.getElementById("ConfExtraDatosGuardar").onclick = function(e){        
+        var content = document.getElementById("ConfExtraDatosCopy");
+        content.select();
+        document.execCommand('copy');
+        alert("Copied!");
+    }
+    document.getElementById("ConfExtraRegresar").onclick = function(e){
+        document.getElementById("HerramientasDV").style.display="inline-block";
+        document.getElementById("ConfExtraDatos").style.display = "none";
+
+    }
+   
+
+  
+
+</script>
+
+
